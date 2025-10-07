@@ -7,32 +7,32 @@
     <title>metatensor.org</title>
     <meta name="description" content="The homepages of the metatensor ecosystem" />
 
-<!-- Apply theme ASAP to avoid flash -->
-<script>
-(() => {
-  const KEY = 'theme';                 // 'auto' | 'light' | 'dark'
-  const prefersDark = matchMedia('(prefers-color-scheme: dark)');
-  const stored = localStorage.getItem(KEY) || 'auto';
+    <!-- Apply theme ASAP to avoid flash -->
+    <script>
+    (() => {
+      const KEY = 'theme';                 // 'auto' | 'light' | 'dark'
+      const prefersDark = matchMedia('(prefers-color-scheme: dark)');
+      const stored = localStorage.getItem(KEY) || 'auto';
 
-  const resolve = (mode) =>
-    mode === 'dark' ? 'dark' :
-    mode === 'light' ? 'light' :
-    (prefersDark.matches ? 'dark' : 'light');
+      const resolve = (mode) =>
+        mode === 'dark' ? 'dark' :
+        mode === 'light' ? 'light' :
+        (prefersDark.matches ? 'dark' : 'light');
 
-  const apply = (mode) => {
-    document.documentElement.setAttribute('data-bs-theme', resolve(mode));
-    const meta = document.querySelector('meta[name="color-scheme"]');
-    if (meta) meta.setAttribute('content', resolve(mode) === 'dark' ? 'dark light' : 'light dark');
-  };
+      const apply = (mode) => {
+        document.documentElement.setAttribute('data-bs-theme', resolve(mode));
+        const meta = document.querySelector('meta[name="color-scheme"]');
+        if (meta) meta.setAttribute('content', resolve(mode) === 'dark' ? 'dark light' : 'light dark');
+      };
 
-  apply(stored);
+      apply(stored);
 
-  // If user is in 'auto', follow OS changes
-  prefersDark.addEventListener('change', () => {
-    if ((localStorage.getItem(KEY) || 'auto') === 'auto') apply('auto');
-  });
-})();
-</script>
+      // If user is in 'auto', follow OS changes
+      prefersDark.addEventListener('change', () => {
+        if ((localStorage.getItem(KEY) || 'auto') === 'auto') apply('auto');
+      });
+    })();
+    </script>
 
     <!-- Use the compiled CSS from Sass (includes Bootstrap + your theme) -->
     <link rel="stylesheet" href="/assets/css/custom.css" />
@@ -40,8 +40,8 @@
 
     <link rel="icon" href="/static/logo/metatensor-org.svg" />
     <meta name="color-scheme" content="light dark">
-  <body>
   </head>
+  <body>
 
     <!-- Header (manual; copy this block to other pages and change the active link) -->
     <nav class="navbar navbar-expand-md bg-body-tertiary border-bottom">
@@ -61,7 +61,7 @@
           -->
             <li class="nav-item"><a class="nav-link" href="https://github.com/metatensor">GitHub</a></li>
             <button id="theme-toggle"
-                    class="btn btn-sm border-0 bg-transparent p-2 focus-ring focus-ring-secondary"
+                    class="btn btn-sm border-0 bg-transparent p-2"
                     type="button"
                     aria-label="Toggle color theme">
               <i class="ti ti-device-desktop" aria-hidden="true"></i>
@@ -109,10 +109,9 @@
                     class="project-logo"
                     src="/static/logo/metatensor.svg"
                     alt=""
-                    width="28" height="28"
                     loading="lazy" decoding="async"
                   />
-                  <h3 class="h5 mb-0">metatensor</h3>
+                  <h3 class="h4 card-title mb-2">metatensor</h3>
                 </div>
                 <p class="card-text mb-3">Core library for storing and manipulating atomistic data.</p>
                 <div class="d-flex gap-2">
@@ -131,10 +130,9 @@
                     class="project-logo"
                     src="/static/logo/metatomic.svg"
                     alt=""
-                    width="28" height="28"
                     loading="lazy" decoding="async"
                   />                
-                  <h3 class="h5 card-title mb-2">metatomic</h3>
+                  <h3 class="h4 card-title mb-2">metatomic</h3>
                 </div>
                 <p class="card-text mb-3">Define the capabilities of atomistic models and provide a consistent API.</p>
                 <div class="d-flex gap-2">
@@ -153,10 +151,9 @@
                     class="project-logo"
                     src="/static/logo/metatrain.svg"
                     alt=""
-                    width="28" height="28"
                     loading="lazy" decoding="async"
                   />               
-                  <h3 class="h5 card-title mb-2">metatrain</h3>
+                  <h3 class="h4 card-title mb-2">metatrain</h3>
                 </div>
                 <p class="card-text mb-3">Train, fine-tune and manipulate models for atomistic properties.</p>
                 <div class="d-flex gap-2">

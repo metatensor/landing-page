@@ -34,8 +34,8 @@ $primary: #5e6ad2;
 }
 
 .project-logo {
-  width: 48px;  // enforce square logo
-  height: 48px;
+  width: 64px;  // enforce square logo
+  height: 64px;
   object-fit: contain;   // keeps aspect ratio for rectangular logos
   border-radius: .5rem;  // soften corners (remove if you want)
   background: var(--bs-body-bg);
