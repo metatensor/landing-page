@@ -1,42 +1,18 @@
-// custom.scss
-
-// Include any default variable overrides here (though functions won't be available)
-
 $primary: #5e6ad2;
-
-// bootstrap import
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-// Then add additional custom code here
-
-// 2) Override via CSS variables so they update with theme switches
 :root {
-  /* Make Bootstrap’s primary follow your brand */
   --brand: #5e6ad2;
   --bs-primary: var(--brand);
 }
 
-/* Optional: tune brand for dark mode, or leave same if you like */
 [data-bs-theme="dark"] {
   --brand: #8b93ff; /* slightly brighter for contrast */
-  /* You can also adjust other tokens if needed:
-     --bs-body-color: #e6e8ee;
-     --bs-body-bg: #0f1115;
-  */
 }
 
-/* Your custom sections should avoid hardcoded colors; use variables */
 .bg-hero {
   background:
     radial-gradient(60% 80% at 20% 0%, color-mix(in oklab, var(--brand) 12%, transparent), transparent 70%),
     radial-gradient(60% 80% at 100% 50%, color-mix(in oklab, var(--brand) 8%, transparent), transparent 70%);
-}
-
-.project-logo {
-  width: 64px;  // enforce square logo
-  height: 64px;
-  object-fit: contain;   // keeps aspect ratio for rectangular logos
-  border-radius: .5rem;  // soften corners (remove if you want)
-  background: var(--bs-body-bg);
 }
