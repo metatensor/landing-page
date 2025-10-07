@@ -1,7 +1,7 @@
 {
   "scripts": {
     "build:css": "sass src/scss/custom.scss dist/assets/css/custom.css --style=compressed",
-    "build:copy": "rimraf dist && mkdir -p dist && cpy static/ *.html .nojekyll dist",
+    "build:copy": "rimraf dist && mkdir -p dist && cpy static/ *.html .nojekyll robots.txt dist",
     "build": "npm run build:copy && npm run build:css"
   },
   "devDependencies": {
