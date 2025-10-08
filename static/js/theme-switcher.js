@@ -1,3 +1,4 @@
+// applies theme and theme switching
 (() => {
   const KEY = 'theme';                           // 'auto' | 'light' | 'dark'
   const ORDER = ['auto', 'light', 'dark'];       // cycle order like Furo

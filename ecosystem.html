@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Apply theme ASAP to avoid flash -->
+    <script src="/static/js/apply-theme.js" defer></script>
+
+    <title>The metatensor ecosystem</title>
+    <meta name="description" content="A list of the software tools developed for and with the metatensor ecosystem" />
+
+    <!-- Use the compiled CSS from Sass (includes Bootstrap + custom theme) -->
+    <link rel="stylesheet" href="/assets/css/custom.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+    <link rel="icon" href="/static/logo/metatensor.svg" />
+    <meta name="color-scheme" content="light dark">
+  </head>
+  <body>
+
+    <!-- placeholder -->
+    <div id="navbar"></div>
+
+    <main class="container py-5">
+      <h1 class="display-4 mb-4">Projects based on the metatensor ecosystem</h1>
+      <p class="lead">
+        This is an (incomplete) list of libraries and software tools that use the metatensor libraries and tools. 
+      </p>
+
+      <!-- Section: Libraries -->
+      <section id="libraries" class="mb-5">
+        <h2 class="h3 mb-3">Libraries</h2>
+        <ul class="list-unstyled">
+          <li class="mb-4">
+            <h4><a href="https://github.com/lab-cosmo/sphericart" target="_blank">sphericart</a></h4>
+            <p>
+              A multi-language library for the efficient calculation of real spherical harmonics and their derivatives in Cartesian coordinates, including
+              fast CUDA kernels. See <a href="https://sphericart.readthedocs.io/en/latest/metatensor-examples.html" target="_blank">
+              the documentation</a> for an example of the metatensor interface. 
+              </p>
+          </li>
+          <li class="mb-4">
+            <h4><a href="https://github.com/lab-cosmo/sphericart" target="_blank">torch-spex</a></h4>
+            <p>
+              A library to evaluate a spherical expansion of the neighbor density - the basic ingredient
+              of atom-density representations.
+            </p>
+          </li>
+          <!-- Add more libraries as needed -->
+        </ul>
+      </section>
+
+      <!-- Section: simulation tools -->
+      <section id="software-tools" class="mb-5">
+        <h2 class="h3 mb-3">Simulation tools</h2>
+        <ul class="list-unstyled">
+          <li class="mb-4">
+            <h4><a href="https://github.com/your-org/tool-one" target="_blank">chemiscope</a></h4>
+            <p>
+              An interactive structure-property explorer for atomistic simulation data.
+              <a href="https://chemiscope.org/docs/python/jupyter.html#dataset-exploration" target="_blank">chemiscope.explore</a>
+              can use metatomic models to generate features to describe structures and atomic environments.
+            </p>
+          </li>
+          <!-- Add more tools as needed -->
+        </ul>
+      </section>
+
+    </main>
+    
+    <!-- placeholder -->
+    <div id="footer"></div>
+
+    <!-- Bootstrap JS (CDN) for interactive components like navbar collapse -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="/static/js/inject-base.js" defer></script>
+    <script src="/static/js/theme-switcher.js" defer></script>
+  </body>
+</html>

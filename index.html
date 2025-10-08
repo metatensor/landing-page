@@ -4,37 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>metatensor.org</title>
-    <meta name="description" content="The homepages of the metatensor ecosystem" />
-
     <!-- Apply theme ASAP to avoid flash -->
-    <script>
-    (() => {
-      const KEY = 'theme';                 // 'auto' | 'light' | 'dark'
-      const prefersDark = matchMedia('(prefers-color-scheme: dark)');
-      const stored = localStorage.getItem(KEY) || 'auto';
+    <script src="/static/js/apply-theme.js" defer></script>
 
-      const resolve = (mode) =>
-        mode === 'dark' ? 'dark' :
-        mode === 'light' ? 'light' :
-        (prefersDark.matches ? 'dark' : 'light');
+    <title>metatensor.org</title>
+    <meta name="description" content="The homepage of the metatensor ecosystem" />
 
-      const apply = (mode) => {
-        document.documentElement.setAttribute('data-bs-theme', resolve(mode));
-        const meta = document.querySelector('meta[name="color-scheme"]');
-        if (meta) meta.setAttribute('content', resolve(mode) === 'dark' ? 'dark light' : 'light dark');
-      };
-
-      apply(stored);
-
-      // If user is in 'auto', follow OS changes
-      prefersDark.addEventListener('change', () => {
-        if ((localStorage.getItem(KEY) || 'auto') === 'auto') apply('auto');
-      });
-    })();
-    </script>
-
-    <!-- Use the compiled CSS from Sass (includes Bootstrap + your theme) -->
+    <!-- Use the compiled CSS from Sass (includes Bootstrap + custom theme) -->
     <link rel="stylesheet" href="/assets/css/custom.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 
@@ -43,34 +19,8 @@
   </head>
   <body>
 
-    <!-- Header (manual; copy this block to other pages and change the active link) -->
-    <nav class="navbar navbar-expand-md bg-body-tertiary border-bottom">
-      <div class="container">
-        <a class="navbar-brand d-flex align-items-center gap-2" href="/">
-          <img src="/static/logo/metatensor.svg" alt="metatensor.org logo" width="28" height="28" />
-          <span>metatensor.org</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div id="nav" class="collapse navbar-collapse">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
-            <!--<li class="nav-item"><a class="nav-link" href="/projects.html">Projects</a></li>
-            <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
-          -->
-            <li class="nav-item"><a class="nav-link" href="https://github.com/metatensor">GitHub</a></li>
-            <button id="theme-toggle"
-                    class="btn btn-sm border-0 bg-transparent p-2"
-                    type="button"
-                    aria-label="Toggle color theme">
-              <i class="ti ti-device-desktop" aria-hidden="true"></i>
-              <span class="visually-hidden">Toggle theme</span>
-            </button>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <!-- placeholder -->
+    <div id="navbar"></div>
 
     <!-- Hero -->
     <header class="py-5 bg-hero">
@@ -246,15 +196,13 @@
       </div>
     </section>
     -->
-    <!-- Footer -->
-    <footer class="py-4 border-top">
-      <div class="container small text-muted">
-        © <span id="year"></span> metatensor.org
-      </div>
-    </footer>
+
+    <!-- placeholder -->
+    <div id="footer"></div>
 
     <!-- Bootstrap JS (CDN) for interactive components like navbar collapse -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="/static/js/theme.js" defer></script>
+    <script src="/static/js/inject-base.js" defer></script>
+    <script src="/static/js/theme-switcher.js" defer></script>
   </body>
 </html>
