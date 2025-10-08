@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Sitemap for org pages -->
+  <sitemap>
+    <loc>https://docs.metatensor.org/sitemap-local.xml</loc>
+  </sitemap>
+  
+  <!-- Sitemap for metatensor docs -->
+  <sitemap>
+    <loc>https://docs.metatensor.org/latest/sitemap.xml</loc>
+  </sitemap>
+</sitemapindex>
+
