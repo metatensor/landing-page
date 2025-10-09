@@ -23,7 +23,7 @@
     <div id="navbar"></div>
 
     <!-- Hero -->
-    <header class="py-5 bg-hero">
+    <header class="pt-5 bg-hero">
       <div class="container">
         <div class="row align-items-center gy-4">
           <div class="col-lg-7">
@@ -68,12 +68,12 @@
     </header>
 
     <!-- Projects -->
-    <section id="projects" class="py-5">
+    <section class="mb-5">
       <div class="container">
-        <h2 class="h3 mb-4">Core projects</h2>
+        <h2 class="mb-5 underlined-title display-2">Core projects</h2>
+        <p class="lead">The three core pillars of the metatensor ecosystem</p>
         <div class="row g-4">
 
-          <!-- One card per project -->
           <div class="col-md-6 col-lg-4">
             <div class="card h-100 shadow-sm">
               <div class="card-body">
@@ -91,7 +91,7 @@
                 </div>
                 <p class="card-text mb-3">Self-describing sparse tensor data format for atomistic machine learning and beyond </p>
                 <div class="d-flex gap-2">
-                  <a class="btn btn-sm btn-primary" href="https://github.com/metatensor/metatensor">GitHub</a>
+                  <a class="btn btn-sm btn-primary" href="https://github.com/metatensor/metatensor">Code</a>
                   <a class="btn btn-sm btn-outline-secondary" href="https://docs.metatensor.org/">Docs</a>
                 </div>
               </div>
@@ -115,7 +115,7 @@
                 </div>
                 <p class="card-text mb-3">Atomistic machine learning models you can use everywhere for everything</p>
                 <div class="d-flex gap-2">
-                  <a class="btn btn-sm btn-primary" href="https://github.com/metatensor/metatomic">GitHub</a>
+                  <a class="btn btn-sm btn-primary" href="https://github.com/metatensor/metatomic">Code</a>
                   <a class="btn btn-sm btn-outline-secondary" href="https://docs.metatensor.org/metatomic">Docs</a>
                 </div>
               </div>
@@ -139,25 +139,49 @@
                 </div>
                 <p class="card-text mb-3"> Train, fine-tune, and manipulate machine learning models for atomistic systems </p>
                 <div class="d-flex gap-2">
-                  <a class="btn btn-sm btn-primary" href="https://github.com/metatensor/metatrain">GitHub</a>
+                  <a class="btn btn-sm btn-primary" href="https://github.com/metatensor/metatrain">Code</a>
                   <a class="btn btn-sm btn-outline-secondary" href="https://docs.metatensor.org/metatrain">Docs</a>
                 </div>
               </div>
             </div>
           </div>
 
+        </div>
+
+        <h2 class="mb-5 mt-5 underlined-title display-2" id="libraries">Libraries</h2>
+        <p class="lead">
+          Software libraries that build on top of the metatensor ecosystem to
+          provide custom building blocks for all your machine learning tasks.
+
+          <br />
+
+          If you are developing a library that uses metatensor or metatomic,
+          please contact us so we can add it to this list!
+        </p>
+        <div class="row g-4">
+
           <div class="col-md-6 col-lg-4">
             <div class="card h-100 shadow-sm">
               <div class="card-body">
                 <div class="d-flex align-items-center gap-2 mb-2">
-                  <h3 class="h5 card-title mb-2">
-                    LAMMPS-metatomic
-                  </h3>
+                  <h3 class="h5 mb-0">sphericart</h3>
                 </div>
-                <p class="card-text mb-3"> A fork of <a href="https://lammps.org/" target="_blank">LAMMPS</a> providing integration with metatomic models. </p>
+                <p class="card-text mb-3">
+                  A library for the efficient calculation of real spherical
+                  harmonics and their derivatives in Cartesian coordinates,
+                  including fast CUDA kernels.
+                </p>
+                <hr />
+                <p>
+                  The <a
+                  href="https://sphericart.readthedocs.io/en/latest/metatensor-examples.html"
+                  target="_blank"><code>sphericart.metatensor</code></a>
+                  module outputs the spherical harmonics using metatensor
+                  format.
+                </p>
                 <div class="d-flex gap-2">
-                  <a class="btn btn-sm btn-primary" href="https://github.com/metatensor/lammps">GitHub</a>
-                  <a class="btn btn-sm btn-outline-secondary" href="https://docs.metatensor.org/metatomic/latest/engines/lammps.html">Docs</a>
+                  <a class="btn btn-sm btn-primary" href="https://github.com/lab-cosmo/sphericart">Code</a>
+                  <a class="btn btn-sm btn-outline-secondary" href="https://sphericart.readthedocs.io/en/latest/">Docs</a>
                 </div>
               </div>
             </div>
@@ -167,44 +191,348 @@
             <div class="card h-100 shadow-sm">
               <div class="card-body">
                 <div class="d-flex align-items-center gap-2 mb-2">
-                  <h3 class="h5 card-title mb-2">
-                    featomic
-                  </h3>
+                  <h3 class="h5 mb-0">featomic</h3>
                 </div>
-                <p class="card-text mb-3"> A library to compute atom-density representations of structures. </p>
+                <p class="card-text mb-3">
+                  Computing representations for atomistic machine learning,
+                  including multiple variants of SOAP and the long range LODE
+                  features; as well as tools to construct custom equivariant
+                  features.
+                </p>
+                <hr />
+                <p>
+                  All of featomic's outputs are returned in metatensor format.
+                </p>
                 <div class="d-flex gap-2">
-                  <a class="btn btn-sm btn-primary" href="https://github.com/metatensor/featomic">GitHub</a>
+                  <a class="btn btn-sm btn-primary" href="https://github.com/metatensor/featomic">Code</a>
                   <a class="btn btn-sm btn-outline-secondary" href="https://docs.metatensor.org/featomic/">Docs</a>
                 </div>
               </div>
             </div>
           </div>
 
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <h3 class="h5 mb-0">torch-spex</h3>
+                </div>
+                <p class="card-text mb-3">
+                  A library for the spherical expansions of atomic
+                  neighbourhoods, using PyTorch to provide GPU acceleration
+                  and automatic differentiation.
+                </p>
+                <hr />
+                <p>
+                  The <code>spex.metatensor</code> module outputs the
+                  spherical expansion using metatensor format.
+                </p>
+                <div class="d-flex gap-2">
+                  <a class="btn btn-sm btn-primary" href="https://github.com/lab-cosmo/torch-spex">Code</a>
+                  <a class="btn btn-sm btn-outline-secondary" href="https://github.com/lab-cosmo/torch-spex#usage">Docs</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <h3 class="h5 mb-0">torch-pme</h3>
+                </div>
+                <p class="card-text mb-3">
+                    Particle-mesh based calculations of long-range interactions in PyTorch
+                </p>
+                <hr />
+                <p>
+                  The <a href="https://lab-cosmo.github.io/torch-pme/latest/references/metatensor.html"
+                  target="_blank"><code>torchpme.metatensor</code></a> module
+                  contains code that follows the metatomic API.
+                </p>
+                <div class="d-flex gap-2">
+                  <a class="btn btn-sm btn-primary" href="https://github.com/lab-cosmo/torch-pme">Code</a>
+                  <a class="btn btn-sm btn-outline-secondary" href="https://lab-cosmo.github.io/torch-pme/">Docs</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <h3 class="h5 mb-0">vesin</h3>
+                </div>
+                <p class="card-text mb-3">
+                  Neighbor list calculator for molecular systems.
+                </p>
+                <hr />
+                <p>
+                  The <a href="https://luthaf.fr/vesin/latest/metatomic.html"
+                  target="_blank"><code>vesin.metatomic</code></a> module
+                  contains tools to compulte neighbor lists for metatomic
+                  models.
+                </p>
+                <div class="d-flex gap-2">
+                  <a class="btn btn-sm btn-primary" href="https://github.com/Luthaf/vesin">Code</a>
+                  <a class="btn btn-sm btn-outline-secondary" href="https://luthaf.fr/vesin/">Docs</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
+
+        <h2 class="mb-5 mt-5 underlined-title display-2" id="simulation-tools">Simulation tools</h2>
+        <p class="lead">
+          Simulation tools that can use metatomic models to run molecular
+          dynamics, Monte Carlo, enhanced sampling, and more!
+        </p>
+        <div class="row g-4">
+
+          <div class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <h3 class="h5 mb-0">LAMMPS-metatomic</h3>
+                  </div>
+                  <p class="card-text mb-3">
+                    A fork of the <a href="https://lammps.org/" target="_blank">LAMMPS</a>
+                    molecular dynamics simulator, providing integration with
+                    metatomic.
+                  </p>
+                  <hr />
+                  <p>
+                    You can use <a
+                    href="https://docs.metatensor.org/metatomic/latest/engines/lammps.html#how-to-use-the-code"
+                    target="_blank">
+                    <code>pair_style metatomic</code></a> to run
+                    simulations using metatomic models to predict energies and
+                    forces.
+                  </p>
+                  <div class="d-flex gap-2">
+                  <a class="btn btn-sm btn-primary" href="https://github.com/metatensor/lammps">Code</a>
+                  <a class="btn btn-sm btn-outline-secondary" href="https://docs.metatensor.org/metatomic/latest/engines/lammps.html">Docs</a>
+                </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <h3 class="h5 mb-0">i-PI</h3>
+                  </div>
+                  <p class="card-text mb-3">
+                    A universal force engine for advanced molecular simulations,
+                    including path integral molecular dynamics, replica
+                    exchange, and more.
+                  </p>
+                  <hr />
+                  <p>
+                    You can run simulations using metatomic models though the
+                    <code>metatomic</code> driver.
+                  </p>
+                  <div class="d-flex gap-2">
+                    <a class="btn btn-sm btn-primary" href="https://github.com/i-pi/i-pi">Code</a>
+                    <a class="btn btn-sm btn-outline-secondary" href="https://docs.ipi-code.org/">Docs</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <h3 class="h5 mb-0">PLUMED</h3>
+                  </div>
+                  <p class="card-text mb-3">
+                    Enhanced sampling and free energy methods for molecular
+                    simulations.
+                  </p>
+                  <hr />
+                  <p>
+                    You can use the <a
+                    href="https://www.plumed.org/doc-master/user-doc/html/METATOMIC/"
+                    target="_blank"><code>METATOMIC</code></a> action to use
+                    collective variables based on metatomic models.
+                  </p>
+                  <div class="d-flex gap-2">
+                    <a class="btn btn-sm btn-primary" href="https://github.com/plumed/plumed2">Code</a>
+                    <a class="btn btn-sm btn-outline-secondary" href="https://www.plumed.org/doc-master/user-doc/html/">Docs</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <h3 class="h5 mb-0">chemiscope</h3>
+                  </div>
+                  <p class="card-text mb-3">
+                    An interactive structure-property explorer for atomistic
+                    simulation data.
+                  </p>
+                  <hr />
+                  <p>
+                    <a
+                    href="https://chemiscope.org/docs/python/jupyter.html#chemiscope.explore"
+                    target="_blank"><code>chemiscope.explore()</code></a> can use
+                    metatomic models to generate features to describe structures
+                    and atomic environments.
+                  </p>
+                  <div class="d-flex gap-2">
+                    <a class="btn btn-sm btn-primary" href="https://github.com/lab-cosmo/chemiscope">Code</a>
+                    <a class="btn btn-sm btn-outline-secondary" href="https://chemiscope.org/docs/">Docs</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <h3 class="h5 mb-0">eOn</h3>
+                  </div>
+                  <p class="card-text mb-3">
+                    Software for long time-scale dynamics of atomistic systems.
+                  </p>
+                  <hr />
+                  <p>
+                    eOn can use <a href="https://eondocs.org/user_guide/metatomic_pot.html" target="_blank">
+                    metatomic models</a> to run simulation with machine learning
+                    potentials.
+                  </p>
+                  <div class="d-flex gap-2">
+                    <a class="btn btn-sm btn-primary" href="https://github.com/TheochemUI/eOn/">Code</a>
+                    <a class="btn btn-sm btn-outline-secondary" href="https://eondocs.org/">Docs</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <h3 class="h5 mb-0">Torch-Sim</h3>
+                  </div>
+                  <p class="card-text mb-3">
+                    TorchSim is an open-source atomistic simulation engine for
+                    the MLIP era, built on PyTorch and designed for batchablity.
+                  </p>
+                  <hr />
+                  <p>
+                    Torch-Sim can use <a
+                    href="https://torchsim.github.io/torch-sim/tutorials/metatomic_tutorial.html"
+                    target="_blank">metatomic models</a> to run simulations.
+                  </p>
+                  <div class="d-flex gap-2">
+                    <a class="btn btn-sm btn-primary" href="https://github.com/Radical-AI/torch-sim/">Code</a>
+                    <a class="btn btn-sm btn-outline-secondary" href="https://torchsim.github.io/torch-sim/">Docs</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <h3 class="h5 mb-0">ASE</h3>
+                  </div>
+                  <p class="card-text mb-3">
+                    The Atomistic Simulation Environment is a set of tools and
+                    Python modules for setting up, manipulating, running,
+                    visualizing and analyzing atomistic simulations.
+                  </p>
+                  <hr />
+                  <p>
+                    You can use <a
+                    href="https://docs.metatensor.org/metatomic/latest/torch/reference/ase.html"
+                    target="_blank"><code>MetatomicCalculator</code></a>
+                    to run simulations using metatomic models to predict
+                    energies and forces.
+                  </p>
+                  <div class="d-flex gap-2">
+                    <a class="btn btn-sm btn-primary" href="https://gitlab.com/ase/ase">Code</a>
+                    <a class="btn btn-sm btn-outline-secondary" href="https://ase-lib.org/">Docs</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        </div>
+
+        <h2 class="mb-5 mt-5 underlined-title display-2" id="ml-models">Machine learning models</h2>
+        <p class="lead">
+          Ready to use machine learning models for diverse tasks in atomistic
+          simulations.
+        </p>
+        <div class="row g-4">
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <h3 class="h5 mb-0">PET-MAD</h3>
+                </div>
+                <p class="card-text mb-3">
+                    A lightweight universal interatomic potential for advanced materials modeling.
+                </p>
+                <div class="d-flex gap-2">
+                  <a class="btn btn-sm btn-primary" href="https://github.com/lab-cosmo/pet-mad">Code</a>
+                  <a class="btn btn-sm btn-outline-secondary" href="https://arxiv.org/abs/2503.14118">Article</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <h3 class="h5 mb-0">ShiftML</h3>
+                </div>
+                <p class="card-text mb-3">
+                  A deep learning model for chemical shieldings in molecular organic solids including anisotropy.
+                </p>
+                <div class="d-flex gap-2">
+                  <a class="btn btn-sm btn-primary" href="https://github.com/lab-cosmo/ShiftML">Code</a>
+                  <a class="btn btn-sm btn-outline-secondary" href="https://pubs.acs.org/doi/10.1021/acs.jpclett.5c01819">Article</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <h3 class="h5 mb-0">FlashMD</h3>
+                </div>
+                <p class="card-text mb-3">
+                  Long-stride, universal prediction of molecular dynamics
+                </p>
+                <div class="d-flex gap-2">
+                  <a class="btn btn-sm btn-primary" href="https://github.com/lab-cosmo/flashmd">Code</a>
+                  <a class="btn btn-sm btn-outline-secondary" href="https://arxiv.org/abs/2505.19350">Article</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </section>
 
-    <!-- Community
-    <section id="community" class="py-5 bg-light border-top">
-      <div class="container">
-        <h2 class="h3 mb-4">Community</h2>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <h3 class="h6 text-uppercase text-muted">Chat</h3>
-            <a href="#" class="link-body-emphasis">Discord</a>
-          </div>
-          <div class="col-md-4">
-            <h3 class="h6 text-uppercase text-muted">Social</h3>
-            <a href="#" class="link-body-emphasis">Twitter/X</a>
-          </div>
-          <div class="col-md-4">
-            <h3 class="h6 text-uppercase text-muted">News</h3>
-            <a href="#" class="link-body-emphasis">Blog</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    -->
 
     <!-- placeholder -->
     <div id="footer"></div>
