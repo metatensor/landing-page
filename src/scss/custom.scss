@@ -3,16 +3,60 @@ $primary: #5e6ad2;
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 :root {
-  --brand: #5e6ad2;
+  --brand: #{$primary};
   --bs-primary: var(--brand);
+  --underline: #{darken($primary, 30%)};
+  --underline-shadow: #{lighten($primary, 10%)};
 }
 
 [data-bs-theme="dark"] {
-  --brand: #8b93ff; /* slightly brighter for contrast */
+  --brand: #{lighten($primary, 20%)};
+  --underline: #{lighten($primary, 30%)};
+  --underline-shadow: #{$primary};
 }
 
 .bg-hero {
   background:
     radial-gradient(60% 80% at 20% 0%, color-mix(in oklab, var(--brand) 12%, transparent), transparent 70%),
     radial-gradient(60% 80% at 100% 50%, color-mix(in oklab, var(--brand) 8%, transparent), transparent 70%);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-text {
+  /* Makes all text areas take up remaining space equally */
+  flex-grow: 1;
+}
+
+.underlined-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.underlined-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: calc(100% + 20px);
+  height: 2px;
+  background-color: var(--underline);
+  box-shadow: var(--underline-shadow) 0px 4px 8px;
+}
+
+.underlined-title::before {
+  content: "";
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--underline);
+  box-shadow: var(--underline-shadow) 0px 2px 8px;
+  transform-origin: right bottom;
+  transform: rotate(-25deg);
 }
