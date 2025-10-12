@@ -9,5 +9,15 @@
   <sitemap>
     <loc>https://docs.metatensor.org/latest/sitemap.xml</loc>
   </sitemap>
+
+  <!-- Sitemap for metatomic docs -->
+  <sitemap>
+    <loc>https://docs.metatensor.org/metatomic/latest/sitemap.xml</loc>
+  </sitemap>
+
+  <!-- Sitemap for metatrain docs -->
+  <sitemap>
+    <loc>https://docs.metatensor.org/metatrain/latest/sitemap.xml</loc>
+  </sitemap>
 </sitemapindex>
 
