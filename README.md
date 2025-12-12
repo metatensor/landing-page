@@ -9,11 +9,11 @@ To build locally, you need to run
 
 ```bash
 npm install
-npm run build
+npm run serve
 ```
 
-the website will be generated in `dist/`. Pages will be automatically deployed
-on commit based on the `.github/workflows/pages.yml` action.
+Pages will be automatically deployed on commit based on the
+`.github/workflows/pages.yml` action.
 
 Please put all static content in `static/`, e.g. images in `static/img`, and
 reference them from the html source.
