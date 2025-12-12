@@ -30,7 +30,8 @@ jobs:
         uses: lycheeverse/lychee-action@v2
         with:
           fail: true
-          args: dist --base-url ./dist/ --accept 100..=103,200..=299,403 --exclude-path dist/static/
+          args: dist --root-dir ./dist/ --accept 100..=103,200..=299,403 --exclude-path dist/static/
+          lycheeVersion: v0.22.0
 
   deploy:
     needs: build
